@@ -2,7 +2,7 @@
   function () {
     /// define patterns for valid sentences
     let validSentences = [];
-    fetch('https://raw.githubusercontent.com/shitpostly/bookmarklet/master/sentences.txt')
+    fetch('https://raw.githubusercontent.com/shitpostly/bookmarklet/master/sentences.txt', { cache: 'no-cache' })
       .then(response => response.text())
       .then((data) => {
         validSentences = data.split('\n')
